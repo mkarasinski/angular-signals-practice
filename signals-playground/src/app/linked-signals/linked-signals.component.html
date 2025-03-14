@@ -1,0 +1,13 @@
+<h2>Linked signals</h2>
+
+<h3>Inventory</h3>
+<button (click)="addProducts()">Add product</button>
+<button (click)="removeProducts()">Remove product</button>
+
+<pre>
+    {{ products() | json }}
+</pre>
+
+<h4>Selected: {{ selectedProduct() }}</h4>
+<button (click)="nextProduct()">Next product</button>
+<button (click)="prevProduct()">Previous product</button>

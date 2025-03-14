@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "change-detection": {
+    "basic-signals": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/change-detection",
+            "outputPath": "dist/basic-signals",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [],
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "change-detection:build:production"
+              "buildTarget": "basic-signals:build:production"
             },
             "development": {
-              "buildTarget": "change-detection:build:development"
+              "buildTarget": "basic-signals:build:development"
             }
           },
           "defaultConfiguration": "development"
