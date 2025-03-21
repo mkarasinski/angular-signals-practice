@@ -1,0 +1,27 @@
+<div class="p-4 bg-white rounded-lg shadow-sm">
+  <h2 class="text-2xl font-bold text-gray-800 mb-2">{{ secondSignal() }}</h2>
+
+  <h3 class="text-lg font-medium text-gray-700 mb-1">
+    <span class="text-indigo-600 font-semibold">Writable signal:</span>
+    {{ firstSignal() }}
+  </h3>
+
+  <h3 class="text-lg font-medium text-gray-700 mb-3">
+    <span class="text-indigo-600 font-semibold">Derived signal:</span>
+    {{ derivedSignal() }}
+  </h3>
+
+  <div class="flex gap-2 mt-2">
+    <button
+      (click)="setSignal()"
+      class="px-3 py-1 text-sm bg-indigo-500 text-white rounded hover:bg-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-300">
+      Set signal
+    </button>
+
+    <button
+      (click)="updateSignal()"
+      class="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300">
+      Update signal
+    </button>
+  </div>
+</div>

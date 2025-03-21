@@ -1,11 +1,11 @@
-import { Component, computed, effect, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-basic-signals',
   imports: [],
   templateUrl: './basic-signals.component.html',
   styleUrl: './basic-signals.component.scss',
-  // OnPush is used for signals
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BasicSignalsComponent {
   readonly firstSignal = signal(42);
@@ -27,12 +27,12 @@ export class BasicSignalsComponent {
   setSignal() {
     // sets value to new value
     this.firstSignal.set(10);
-    this.firstSignal.update((value) => value + 1);
+    this.firstSignal.update(value => value + 1);
     this.secondSignal.set('Basic signals:');
   }
 
   updateSignal() {
     // update and sets value based on original value
-    this.firstSignal.update((value) => value + 1);
+    this.firstSignal.update(value => value + 1);
   }
 }

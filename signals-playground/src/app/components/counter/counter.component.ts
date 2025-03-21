@@ -1,11 +1,4 @@
-import {
-  Component,
-  effect,
-  EffectRef,
-  inject,
-  Injector,
-  signal,
-} from '@angular/core';
+import { Component, effect, EffectRef, inject, Injector, signal } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -20,7 +13,7 @@ export class CounterComponent {
 
   constructor() {
     setInterval(() => {
-      this.value.update((v) => v + 1);
+      this.value.update(v => v + 1);
     }, 1000);
   }
 
@@ -37,7 +30,7 @@ export class CounterComponent {
         // to use effects after initialization, we need to pass injector
         // effect will be automatically destroyed when component is destroyed
         injector: this.injector,
-      }
+      },
     );
   }
 

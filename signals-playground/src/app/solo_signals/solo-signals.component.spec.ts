@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CounterComponent } from './counter.component';
+import { SoloSignalsComponent } from './solo-signals.component';
 
-describe('CounterComponent', () => {
-  let component: CounterComponent;
-  let fixture: ComponentFixture<CounterComponent>;
+describe('SoloSignalsComponent', () => {
+  let component: SoloSignalsComponent;
+  let fixture: ComponentFixture<SoloSignalsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CounterComponent],
+      imports: [SoloSignalsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CounterComponent);
+    fixture = TestBed.createComponent(SoloSignalsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

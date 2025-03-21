@@ -1,0 +1,24 @@
+<div class="p-4 bg-white rounded-lg shadow-sm">
+  <div class="flex items-center justify-center gap-3 mb-3">
+    <button
+      (click)="increase()"
+      class="w-8 h-8 flex items-center justify-center bg-indigo-500 text-white rounded-full hover:bg-indigo-600 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-300">
+      +
+    </button>
+
+    <div class="text-2xl font-bold text-gray-800 min-w-10 text-center">
+      {{ number() }}
+    </div>
+
+    <button
+      (click)="decrease()"
+      class="w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors focus:outline-none focus:ring-2 focus:ring-red-300">
+      -
+    </button>
+  </div>
+
+  <div class="bg-gray-100 p-3 rounded text-sm">
+    <span class="font-medium text-indigo-600">Factors:</span>
+    <span class="text-gray-700">{{ primeFactors() }}</span>
+  </div>
+</div>
