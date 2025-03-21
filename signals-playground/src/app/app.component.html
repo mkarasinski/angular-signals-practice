@@ -3,3 +3,10 @@
 <app-basic-signals></app-basic-signals>
 
 <app-linked-signals></app-linked-signals>
+
+<div style="margin-top: 50px;">
+  <button (click)="toggleCounter()">Toggle counter</button>
+  @if (showCounter) {
+  <app-counter></app-counter>
+  }
+</div>
