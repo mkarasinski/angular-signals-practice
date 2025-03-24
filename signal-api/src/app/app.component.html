@@ -1,0 +1,21 @@
+<h1>Currency Converter</h1>
+<label>Amount</label>
+<input type="number" [formControl]="amount" />
+
+<label>Currency</label>
+
+<!-- Two way binding with signal -->
+<!-- [selected]="currency()" - input -->
+<!-- (selectedChange)="currency.set($event) - output" -->
+<!-- [(selected)]="currency" - both -->
+
+<app-option-selector
+  [options]="currencies"
+  [(selected)]="currency"
+></app-option-selector>
+
+<app-currency-converter
+  [amount]="amount.value!"
+  [currency]="currency()"
+  (refreshRequired)="refresh()"
+></app-currency-converter>
