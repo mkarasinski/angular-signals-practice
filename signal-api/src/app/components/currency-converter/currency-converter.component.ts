@@ -7,8 +7,19 @@ import {
 } from '@angular/core';
 import { RATES } from './rates';
 import { CommonModule } from '@angular/common';
-import { BehaviorSubject, interval, map, startWith, switchMap } from 'rxjs';
-import { outputFromObservable, takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import {
+  BehaviorSubject,
+  interval,
+  map,
+  startWith,
+  Subject,
+  switchMap,
+  takeUntil,
+} from 'rxjs';
+import {
+  outputFromObservable,
+  takeUntilDestroyed,
+} from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-currency-converter',
@@ -26,14 +37,20 @@ export class CurrencyConverterComponent {
   // readonly refreshRequired = output<void>();
   readonly manualRefresh$ = new BehaviorSubject<void>(undefined);
   // manual refresh output every 5 seconds and on manuall click
+  private readonly stop$ = new Subject<void>();
   readonly refreshRequired$ = this.manualRefresh$.pipe(
     switchMap(() => interval(5000).pipe(startWith(0))),
     map(() => undefined),
-    takeUntilDestroyed()
+    takeUntilDestroyed(),
+    takeUntil(this.stop$)
   );
   // Connecting observable with signal output.
   readonly refreshRequired = outputFromObservable(this.refreshRequired$);
 
   readonly rate = computed(() => RATES[this.currency()]);
   readonly converted = computed(() => this.amount() * this.rate());
+
+  stopRefresh() {
+    this.stop$.next();
+  }
 }
