@@ -4,6 +4,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { RATES } from './components/currency-converter/rates';
 import { OptionSelectorComponent } from './components/option-selector/option-selector.component';
 import { OptionDirective } from './components/option-selector/option.directive';
+import { RgbDirective } from './directives/rgb.directive';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { OptionDirective } from './components/option-selector/option.directive';
     OptionSelectorComponent,
     ReactiveFormsModule,
     OptionDirective,
+    RgbDirective,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
