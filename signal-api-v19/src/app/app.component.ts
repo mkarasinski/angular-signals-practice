@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, effect, inject, resource, signal } from '@angular/core';
 import { SearchService } from './services/search.service';
+import { rxResource } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +15,15 @@ export class AppComponent {
 
   // similar to linked signals, but resource is asynchronous
   // resource is for working with promises
-  readonly results = resource({
+  // readonly results = resource({
+  //   request: () => this.keyword(),
+  //   loader: obj => this.service.search(obj.request, obj.abortSignal),
+  // });
+
+  // almost the same but working with Observables instead of promises
+  readonly results = rxResource({
     request: () => this.keyword(),
-    loader: obj => this.service.search(obj.request, obj.abortSignal),
+    loader: obj => this.service.rxSearch(obj.request),
   });
 
   constructor() {
