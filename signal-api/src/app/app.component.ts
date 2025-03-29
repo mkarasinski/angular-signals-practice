@@ -1,15 +1,9 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  signal,
-  viewChild,
-  viewChildren,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, signal, viewChild } from '@angular/core';
 import { CurrencyConverterComponent } from './components/currency-converter/currency-converter.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { RATES } from './components/currency-converter/rates';
 import { OptionSelectorComponent } from './components/option-selector/option-selector.component';
+import { OptionDirective } from './components/option-selector/option.directive';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +11,7 @@ import { OptionSelectorComponent } from './components/option-selector/option-sel
     CurrencyConverterComponent,
     OptionSelectorComponent,
     ReactiveFormsModule,
+    OptionDirective,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -42,4 +37,8 @@ export class AppComponent {
   public stopRefresh() {
     this.currencyConverter()?.stopRefresh();
   }
+
+  // OnInit for inputs
+  // AfterInit for queries
+  // Effect happens after all initial lifecycle hooks
 }

@@ -8,9 +8,8 @@ describe('OptionSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OptionSelectorComponent]
-    })
-    .compileComponents();
+      imports: [OptionSelectorComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(OptionSelectorComponent);
     component = fixture.componentInstance;
