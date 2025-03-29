@@ -1,6 +1,14 @@
-<h1>Currency Converter</h1>
+<h1
+  appRgb
+  [red]="30"
+  [green]="150"
+  [blue]="150">
+  Currency Converter
+</h1>
 <label>Amount</label>
-<input type="number" [formControl]="amount" />
+<input
+  type="number"
+  [formControl]="amount" />
 
 <label>Currency</label>
 
@@ -9,9 +17,16 @@
 <!-- (selectedChange)="currency.set($event) - output" -->
 <!-- [(selected)]="currency" - both -->
 
-<app-option-selector [options]="currencies" [(selected)]="currency">
-  <span *appOption="let currency" class="currency-option">
-    <img [src]="'/icons/' + currency + '.svg'" alt="{{ currency }}" class="currency-icon" />
+<app-option-selector
+  [options]="currencies"
+  [(selected)]="currency">
+  <span
+    *appOption="let currency"
+    class="currency-option">
+    <img
+      [src]="'/icons/' + currency + '.svg'"
+      alt="{{ currency }}"
+      class="currency-icon" />
     {{ currency }}
   </span>
 </app-option-selector>
