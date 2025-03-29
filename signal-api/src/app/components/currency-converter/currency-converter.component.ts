@@ -1,25 +1,8 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  input,
-  output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { RATES } from './rates';
 import { CommonModule } from '@angular/common';
-import {
-  BehaviorSubject,
-  interval,
-  map,
-  startWith,
-  Subject,
-  switchMap,
-  takeUntil,
-} from 'rxjs';
-import {
-  outputFromObservable,
-  takeUntilDestroyed,
-} from '@angular/core/rxjs-interop';
+import { BehaviorSubject, interval, map, startWith, Subject, switchMap, takeUntil } from 'rxjs';
+import { outputFromObservable, takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-currency-converter',
@@ -42,7 +25,7 @@ export class CurrencyConverterComponent {
     switchMap(() => interval(5000).pipe(startWith(0))),
     map(() => undefined),
     takeUntilDestroyed(),
-    takeUntil(this.stop$)
+    takeUntil(this.stop$),
   );
   // Connecting observable with signal output.
   readonly refreshRequired = outputFromObservable(this.refreshRequired$);

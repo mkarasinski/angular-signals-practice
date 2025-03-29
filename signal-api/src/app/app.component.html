@@ -9,16 +9,17 @@
 <!-- (selectedChange)="currency.set($event) - output" -->
 <!-- [(selected)]="currency" - both -->
 
-<app-option-selector
-  [options]="currencies"
-  [(selected)]="currency"
-></app-option-selector>
+<app-option-selector [options]="currencies" [(selected)]="currency">
+  <span *appOption="let currency" class="currency-option">
+    <img [src]="'/icons/' + currency + '.svg'" alt="{{ currency }}" class="currency-icon" />
+    {{ currency }}
+  </span>
+</app-option-selector>
 
 <app-currency-converter
   [amount]="amount.value!"
   [currency]="currency()"
-  (refreshRequired)="refresh()"
-></app-currency-converter>
+  (refreshRequired)="refresh()"></app-currency-converter>
 
 <div #myRef></div>
 <button (click)="stopRefresh()">Stop Refresh Event</button>
