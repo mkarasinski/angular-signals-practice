@@ -33,6 +33,10 @@ module.exports = tseslint.config(
       ],
       '@angular-eslint/prefer-standalone': 'error',
       '@angular-eslint/prefer-on-push-component-change-detection': 'error',
+      '@angular-eslint/prefer-signals': 'error',
+      '@angular-eslint/prefer-output-readonly': 'error',
+      '@angular-eslint/use-injectable-provided-in': 'error',
+      '@angular-eslint/relative-url-prefix': 'warn',
     },
   },
   {
