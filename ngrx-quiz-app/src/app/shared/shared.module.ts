@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, Type } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ColorNamePipe } from '../pipes/color-name.pipe';
 
-const sharable: Type<any>[] = [
+const sharable = [
   MatIconModule,
   MatButtonModule,
   MatDialogModule,

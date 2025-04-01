@@ -7,7 +7,7 @@ import { randomColorQuiz } from './helpers';
 export class ColorQuizGeneratorService {
   createRandomQuiz(): Observable<Question[]> {
     return of(1).pipe(
-      map(_ => randomColorQuiz()),
+      map(() => randomColorQuiz()),
       delay(2000),
     );
   }
