@@ -6,6 +6,6 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [SharedModule],
   templateUrl: './busy.component.html',
   styleUrl: './busy.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BusyComponent {}

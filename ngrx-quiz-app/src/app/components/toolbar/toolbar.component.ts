@@ -6,7 +6,7 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [SharedModule],
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarComponent {
   readonly caption = input.required<string>();

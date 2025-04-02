@@ -8,5 +8,15 @@
   "bracketSpacing": true,
   "arrowParens": "avoid",
   "bracketSameLine": true,
-  "singleAttributePerLine": true
+  "singleAttributePerLine": true,
+  "trailingComma": "none",
+  "endOfLine": "crlf",
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
 }

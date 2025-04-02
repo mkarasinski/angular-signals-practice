@@ -6,7 +6,7 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [SharedModule],
   templateUrl: './done.component.html',
   styleUrl: './done.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DoneComponent {
   readonly correct = signal(3);

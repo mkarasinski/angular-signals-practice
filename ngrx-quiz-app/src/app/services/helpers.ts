@@ -39,7 +39,7 @@ const KNOWN_COLORS: KEYWORD[] = [
   'teal',
   'gold',
   'lime',
-  'tomato',
+  'tomato'
 ];
 
 export function addRgb(...rgbs: RGB[]): RGB {
@@ -73,14 +73,14 @@ export function randomColorQuestion() {
   const question: Question = {
     caption: colors,
     answers,
-    correctIndex,
+    correctIndex
   };
   return question;
 }
 
 export function randomColorQuiz() {
   return Array.from({
-    length: randomNumber(6, 20),
+    length: randomNumber(6, 20)
   }).map(() => randomColorQuestion());
 }
 
@@ -239,7 +239,7 @@ export function getColorDisplayNameMap() {
     'White',
     'WhiteSmoke',
     'Yellow',
-    'YellowGreen',
+    'YellowGreen'
   ];
 
   return Object.fromEntries(htmlColors.map(clr => [clr.toLowerCase(), splitCamelCase(clr)]));

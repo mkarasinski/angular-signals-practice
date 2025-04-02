@@ -9,5 +9,5 @@ export interface QuizSlice {
 
 export const initialQuizSlice: QuizSlice = {
   questions: QUESTIONS,
-  answers: [],
+  answers: []
 };

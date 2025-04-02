@@ -13,12 +13,12 @@ import { QuizStore } from './store/quiz.store';
     QuestionPresenterComponent,
     ToolbarComponent,
     ProgressComponent,
-    DoneComponent,
+    DoneComponent
     // BusyComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   readonly store = inject(QuizStore);

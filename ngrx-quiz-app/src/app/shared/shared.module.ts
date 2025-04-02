@@ -22,11 +22,11 @@ const sharable = [
   RouterModule,
   ReactiveFormsModule,
   ColorNamePipe,
-  MatProgressSpinnerModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({
   imports: [...sharable],
-  exports: [...sharable],
+  exports: [...sharable]
 })
 export class SharedModule {}

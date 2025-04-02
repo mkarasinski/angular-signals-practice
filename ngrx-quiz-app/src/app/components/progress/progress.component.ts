@@ -6,7 +6,7 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [SharedModule],
   templateUrl: './progress.component.html',
   styleUrl: './progress.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProgressComponent {
   readonly value = signal(4);

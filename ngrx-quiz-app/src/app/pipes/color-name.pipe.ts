@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { displayNameOfColor } from '../services/helpers';
 
 @Pipe({
-  name: 'colorName',
+  name: 'colorName'
 })
 export class ColorNamePipe implements PipeTransform {
   transform(value: string): string {
